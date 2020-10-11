@@ -4,6 +4,9 @@ body {
   line-height: 1.15;
   margin-bottom: 100px;
 }
+.rtc {
+  font-size: 1.5rem;
+}
 a {
   color:lightgoldenrodyellow;
   font-weight:700;
@@ -19,5 +22,13 @@ p {
 @media only screen and (min-width:768px) {
   p {
     margin:2%;
+  }
+  .rtc {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width:1000px) {
+  .rtc {
+    font-size: 1.75rem;
   }
 }
