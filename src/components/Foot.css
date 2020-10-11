@@ -1,0 +1,42 @@
+.FootOuterDiv {
+  width:80%;
+  color:white;
+  margin: auto;
+  margin-top:10%;
+}
+.footStyle {
+  width:80%;
+  border-radius:.5em;
+  color:whitesmoke;
+  margin:auto;
+  margin-top:3%;
+  padding:3%;
+  border: 3px solid #21355f;
+  background:#181a34;
+
+}
+.swapshipDiv {
+  margin-top: 10%;
+}
+.info {
+  font-size: 1.35rem;
+}
+a {
+  font-size:1.2rem;
+}
+.footDiv {
+  margin-top: 12%;
+}
+.innerFootDiv{
+  margin-bottom: 2%;
+}
+
+
+@media only screen and (min-width:968px) {
+  .footStyle {
+    width:70%;
+  }
+  .info{
+    font-size:1.6rem;
+  }
+}

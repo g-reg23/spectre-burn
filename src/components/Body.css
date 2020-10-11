@@ -1,0 +1,126 @@
+
+.innerBurnDiv, .innerBurnDiv2 {
+  width:80%;
+  border-radius:.5em;
+  color:whitesmoke;
+  margin:auto;
+  margin-top:3%;
+  padding:1% 2% 1% 2%;
+  border: 3px solid #21355f;
+  background:#181a34;
+}
+.innerBurnDiv2 {
+  margin-top: 2%
+}
+.subBurnDiv {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  margin:auto;
+  margin-top:2%;
+  width:90%;
+}
+.innerSubDiv {
+  margin:auto;
+  border-radius:.5em;
+  width:90%;
+  padding:1% 2% 0 2%;
+  border: 3px solid #21355f;
+  background:#181a34;
+}
+.burnTitle {
+  font-size:1.05rem;
+  color:white;
+  font-weight: 500;
+}
+.burnNumber {
+  font-size:2.1rem;
+  color: #efdc91;
+  text-shadow: 0 0 0.7rem #e8820e;
+  color:lightgoldenrodyellow;
+  text-shadow: 0px 0px 3px;
+}
+.addBurn {
+  font-size:1.7rem;
+  color:white;
+  text-shadow: none;
+}
+.addressP {
+  word-wrap: break-word;
+  color:#6b738a;
+}
+@media only screen and (min-width:450px) {
+  .burnTitle {
+    font-size:1.25rem;
+  }
+  .burnNumber {
+    font-size:2.2rem;
+  }
+  .subBurnDiv {
+    margin-top:1%;
+  }
+}
+@media only screen and (min-width:575px) {
+  .innerBurnDiv2 {
+    margin-top: 1%
+  }
+}
+@media only screen and (min-width:768px) {
+  .innerBurnDiv2 {
+    margin-top: 1%;
+    width: 60%;
+  }
+  .addressP {
+    font-size:1.3rem;
+    /* width:75%;
+    margin: auto; */
+    margin-bottom: 2%;
+  }
+  .addBurn {
+    font-size:1.85rem;
+  }
+  .innerBurnDiv {
+    width:60%;
+  }
+  .burnNumber {
+    font-size:2.25rem;
+  }
+  .burnTitle {
+    font-size:1.25rem;
+  }
+}
+@media only screen and (min-width:768px) and (min-height:1000px) {
+
+}
+
+@media only screen and (min-width:968px) {
+  .addressDiv {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .innerBurnDiv2 {
+    margin-top: 1%;
+    width: 90%;
+  }
+  .innerSubDiv {
+    padding:5%;
+  }
+  .subBurnDiv {
+    column-gap:20px;
+  }
+  .burnTitle {
+    font-size:1.75rem;
+  }
+  .burnNumber {
+    font-size:2.5rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width:1160px) {
+
+}
+@media only screen and (min-width:1375px) {
+
+}
