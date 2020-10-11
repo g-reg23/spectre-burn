@@ -3,7 +3,7 @@ import './Foot.css'
 
 function Foot() {
   // <div><a className='cp' href='https://gstauf.tech' target='_blank' rel='noopener noreferrer'>&copy; Copyright 2020, gstauf</a></div>
-
+  // <div className='innerFootDiv'><a className='attLink' href='https://coingecko.com' target='_blank' rel='noopener noreferrer'>Price Data powered by CoinGecko API</a></div>
     return(
       <div className='FootOuterDiv'>
         <div className='footStyle'>
@@ -16,7 +16,6 @@ function Foot() {
         </div>
         <div className='footDiv'>
           <div className='innerFootDiv'><a className='attLink' href='https://github.com/ethereum/web3.js/' target='_blank' rel='noopener noreferrer'>Ethereum data powered by Web3.js</a></div>
-          <div className='innerFootDiv'><a className='attLink' href='https://coingecko.com' target='_blank' rel='noopener noreferrer'>Price Data powered by CoinGecko API</a></div>
           <div className='innerFootDiv'><p>&copy; Copyright 2020, gstauf</p></div>
       </div>
       </div>
