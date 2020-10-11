@@ -6,6 +6,7 @@ import commas from '../functions/commas'
 import Flame from './Flame';
 
 function Body() {
+  console.log(process.env.REACT_APP_INFURA_KEY);
   const [fetch, setFetch] = useState(false)
   const [data, setData] = useState({
     supply:0,
