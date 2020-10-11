@@ -35,7 +35,7 @@ function Body() {
       console.log(contract);
       setFetch(true);
     }
-  }, [fetch])
+  }, [fetch,data])
   return(
     <div className='outerBodyDiv'>
       <div className='burnDiv'>
