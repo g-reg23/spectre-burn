@@ -190,6 +190,13 @@
   }
 }
 
+@media only screen and (min-width:370px) and (min-height:650px) {
+  .fire {
+    height:45px;
+    width:45px;
+    /* margin-top:6% */
+  }
+}
 @media only screen and (min-width:768px) {
   .fire {
     opacity:.9;
@@ -205,5 +212,5 @@
   }
 }
 @media only screen and (min-width:1400px) {
-  
+
 }

@@ -12,8 +12,13 @@
 }
 .title {
   margin-top:10%;
-  font-size:2rem;
+  font-size:1.85rem;
   color:whitesmoke;
+}
+.rtc {
+  font-size: 1.15rem;
+  font-weight:450;
+  opacity: .8;
 }
 @media only screen and (min-width:450px) {
   .logo {
@@ -26,9 +31,32 @@
     padding:1%
   }
 }
+@media only screen and (min-width:370px) and (min-height:650px) {
+  .title {
+    margin-top: 20%;
+    font-size:2rem;
+  }
+  .rtc {
+    font-size:1.5rem;
+  }
+}
+@media only screen and (min-width:370px) and (min-height:800px) {
+  .title {
+    font-size:2.2rem;
+  }
+}
 @media only screen and (min-width:768px) {
   .logo {
     width:40%;
+  }
+}
+@media only screen and (min-width:760px) and (min-height:1020px) {
+  .title {
+    font-size: 3.35rem;
+    margin-top: 10%;
+  }
+  .rtc {
+    font-size:2rem;
   }
 }
 @media only screen and (min-width:908px) {
@@ -43,5 +71,17 @@
   }
   .logo {
     width:35%;
+  }
+}
+  @media only screen and (min-width:1000px) and (min-height:1320px) {
+  .title {
+    margin-top: 20%;
+    font-size: 3.5rem;
+  }
+  .rtc {
+    font-size:2.25rem;
+  }
+  .headDiv {
+    margin-bottom: 5%;
   }
 }

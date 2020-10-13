@@ -27,6 +27,7 @@
   margin:auto;
   margin-top:2%;
   width:95%;
+  column-gap: 20px;
 }
 .innerSubDiv {
   margin:auto;
@@ -37,19 +38,23 @@
   background:#181a34;
 }
 .burnTitle {
-  font-size:1.05rem;
+  font-size:1.0rem;
   color:white;
   font-weight: 500;
 }
 .burnNumber {
+  opacity: .85;
   font-size:1.7rem;
   color: #efdc91;
   text-shadow: 0 0 0.7rem #e8820e;
   color:lightgoldenrodyellow;
   text-shadow: 0px 0px 3px;
 }
+.decimals {
+  font-size:1.45rem;
+}
 .supply {
-  font-size:2.2rem
+  font-size:2rem;
 }
 .addBurn {
   font-size:1.7rem;
@@ -71,13 +76,50 @@
   .burnNumber {
     font-size:2.2rem;
   }
+  .decimals {
+    font-size:1.75rem;
+  }
   .subBurnDiv {
     margin-top:1%;
+  }
+}
+@media only screen and (min-width:359px) and (min-height:639px) {
+  .burnTitle {
+    font-size:1.15rem;
+  }
+  .burnNumber {
+    font-size:1.9rem;
+  }
+  .supply {
+    font-size:2.25rem;
+  }
+  .innerSubDiv {
+    padding:3%;
+  }
+  .addressDiv {
+    margin-top: 10%;
   }
 }
 @media only screen and (min-width:575px) {
   .innerBurnDiv2 {
     margin-top: 1%
+  }
+}
+@media only screen and (min-width:374px) and (min-height:800px) {
+  .burnTitle {
+    font-size:1.2rem;
+  }
+  .innerSubDiv {
+    padding:5.5%;
+  }
+  .burnNumber {
+    font-size:2rem;
+  }
+  .supply {
+    font-size:2.5rem;
+  }
+  .subBurnDiv {
+    margin-top: 3.5%;
   }
 }
 @media only screen and (min-width:768px) {
@@ -100,12 +142,47 @@
   .burnNumber {
     font-size:2.25rem;
   }
+  .decimals {
+    font-size:1.8rem;
+  }
   .burnTitle {
     font-size:1.25rem;
   }
 }
-@media only screen and (min-width:768px) and (min-height:1000px) {
-
+@media only screen and (min-width:760px) and (min-height:1020px) {
+  .burnTitle {
+    font-size:1.95rem;
+  }
+  .burnNumber {
+    font-size:2.5rem;
+  }
+  .decimals {
+    font-size:1.95rem;
+  }
+  .supply {
+    font-size:2.75rem;
+  }
+  .innerSubDiv {
+    padding:5%;
+  }
+  .subBurnDiv {
+    margin-top:3%;
+  }
+  .innerBurnDiv {
+    padding:3%;
+  }
+  .addressDiv {
+    margin-top:5%;
+  }
+  .addressP {
+    font-size:1.7rem;
+  }
+  .addBurn{
+    font-size: 2.5rem;
+  }
+  .addressLink {
+    font-size: 2.05rem;
+  }
 }
 
 @media only screen and (min-width:968px) {
@@ -117,12 +194,9 @@
     width:50%;
     margin-top:0;
   }
-  .addressDiv {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top:1%;
+  .innerAddDiv {
+    width:60%;
   }
-
   .subBurnDiv {
     margin-top:.5%;
   }
@@ -139,9 +213,59 @@
   .burnNumber {
     font-size:2.35rem;
   }
+  .decimals {
+    font-size:1.9rem;
+  }
 }
+@media only screen and (min-width:1060px) {
 
+}
+@media only screen and (min-width:1000px) and (min-height:1330px) {
+  .burnTitle {
+    font-size:2.5rem;
+  }
+  .burnNumber {
+    font-size:3rem;
+  }
+  .decimals {
+    font-size:2.15rem;
+  }
+  .supply {
+    font-size:3.5rem;
+  }
+  .innerSubDiv {
+    padding:5%;
+  }
+  .subBurnDiv {
+    margin-top:3%;
+    column-gap: 20px;
+  }
+  .innerBurnDiv {
+    padding:3%;
+  }
+  .addressDiv {
+    margin-top:10%;
+    width:100%;
+  }
+  .addressP {
+    font-size:2rem;
+  }
+  .addBurn{
+    font-size: 2.85rem;
+  }
+  .addressLink {
+    font-size: 2.25rem;
+  }
+}
 @media only screen and (min-width:1160px) {
+  .innerAddDiv {
+    width:80%;
+  }
+  .addressDiv {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:1%;
+   }
   .innerSubDiv {
     padding:.2%;
   }

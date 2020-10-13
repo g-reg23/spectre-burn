@@ -1,4 +1,4 @@
-.FootOuterDiv {
+.footOuterDiv {
   width:80%;
   color:white;
   margin: auto;
@@ -30,7 +30,23 @@ a {
 .innerFootDiv{
   margin-bottom: 2%;
 }
-
+@media only screen and (min-width:760px) and (min-height:1020px) {
+  a {
+    font-size:2rem;
+  }
+  .info {
+    font-size: 2.2rem;
+  }
+  .cp {
+    font-size:1.8rem;
+  }
+  .footOuterDiv {
+    width:100%;
+  }
+  .footStyle {
+    width:70%;
+  }
+}
 
 @media only screen and (min-width:968px) {
   .footStyle {
@@ -38,5 +54,16 @@ a {
   }
   .info{
     font-size:1.6rem;
+  }
+}
+@media only screen and (min-width:1000px) and (min-height:1330px) {
+  .info {
+    font-size:2.5rem;
+  }
+  a {
+    font-size:2.35rem;
+  }
+  .cp {
+    font-size:2rem;
   }
 }

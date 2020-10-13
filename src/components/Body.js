@@ -37,11 +37,12 @@ function Body() {
       setFetch(true);
     }
   }, [fetch,data])
+  const dec = ((data.supply - data.burn)%1).toFixed(3).toString().split('.');
   return(
     <div className='outerBodyDiv'>
       <div className='burnDiv'>
         <div className='innerBurnDiv'>
-          <p className='burnNumber su'>{commas((data.supply - data.burn).toFixed(3))}</p>
+          <p className='burnNumber supply'>{commas((data.supply - data.burn).toFixed(0))}<span className='decimals'>.{dec[1]}</span></p>
           <Flame />
           <p className='burnTitle'>SPECTRE Total Supply</p>
         </div>
