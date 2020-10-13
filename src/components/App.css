@@ -1,8 +1,11 @@
 body {
   text-align: center;
   background:#181a34;
+  background: rgb(24,26,52);
+  background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(70,77,154,1) 47%, rgba(8,13,71,1) 100%);
   line-height: 1.15;
   margin-bottom: 100px;
+  color:linear-gradient(90deg, rgba(199,202,231,1) 0%, rgba(183,186,212,1) 47%, rgba(198,202,249,1) 100%);
 }
 a {
   color:lightgoldenrodyellow;

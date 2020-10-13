@@ -2,18 +2,22 @@
 .innerBurnDiv, .innerBurnDiv2 {
   width:80%;
   border-radius:.5em;
-  color:whitesmoke;
+  color:rgba(199,202,231,1);
   margin:auto;
   margin-top:3%;
   padding:1% 2% 1% 2%;
   border: 3px solid #21355f;
   background:#181a34;
+  background: rgb(24,26,52);
+  background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(23,28,91,1) 47%, rgba(8,13,71,1) 100%);
 }
 .innerAddDiv {
   width:90%;
   padding:1%;
   border: 3px solid #21355f;
   background:#181a34;
+  background: rgb(24,26,52);
+  background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(23,28,91,1) 47%, rgba(8,13,71,1) 100%);
   margin:auto;
   margin-top:3%;
   border-radius:.5em;
@@ -36,14 +40,16 @@
   padding:1% 2% 0 2%;
   border: 3px solid #21355f;
   background:#181a34;
+  background: rgb(24,26,52);
+  background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(23,28,91,1) 47%, rgba(8,13,71,1) 100%);
 }
 .burnTitle {
   font-size:1.0rem;
-  color:white;
+  color:rgba(199,202,231,1);
   font-weight: 500;
 }
 .burnNumber {
-  opacity: .85;
+  /* opacity: .85; */
   font-size:1.7rem;
   color: #efdc91;
   text-shadow: 0 0 0.7rem #e8820e;
@@ -58,7 +64,7 @@
 }
 .addBurn {
   font-size:1.7rem;
-  color:white;
+  color:rgba(199,202,231,1);
   text-shadow: none;
 }
 .addressP {
@@ -123,12 +129,6 @@
   }
 }
 @media only screen and (min-width:768px) {
-  .rtc {
-    margin-top: -4%;
-  }
-  .title{
-    margin-top:10%;
-  }
   .innerBurnDiv2 {
     margin-top: 1%;
     width: 60%;
@@ -192,9 +192,6 @@
 }
 
 @media only screen and (min-width:968px) {
-  .rtc {
-    margin-top: -6%;
-  }
   .innerSubDiv {
     padding:.5%;
   }
@@ -281,9 +278,6 @@
   .innerBurnDiv {
     padding:.05%;
   }
-  .rtc {
-    margin-top: -8%;
-  }
 }
 @media only screen and (min-width:1300px) {
   .burnNumber {
@@ -295,7 +289,5 @@
   .burnTitle {
     font-size:1.75rem;
   }
-  .rtc {
-    margin-top: -10%;
-  }
+
 }
