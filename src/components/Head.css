@@ -16,9 +16,24 @@
   color:whitesmoke;
 }
 .rtc {
-  font-size: 1.15rem;
-  font-weight:450;
-  opacity: .8;
+  font-size:1.1rem;
+  width:140%;
+  margin-left: -20%;
+  text-shadow: none;
+  background: #dcddef;
+  padding:5%;
+  border-radius: .5rem;
+  border: #6267b7 1px solid;
+  color:#181a34;
+  text-decoration: none;
+  cursor: pointer;
+  word-wrap: none;
+  transition: .3s;
+}
+.rtc:hover {
+  border:#dcddef 1px solid;
+  background: #181a34;
+  color:#dcddef;
 }
 @media only screen and (min-width:450px) {
   .logo {
@@ -30,6 +45,9 @@
   .headDiv {
     padding:1%
   }
+  .rtc {
+    font-size:1.2rem;
+  }
 }
 @media only screen and (min-width:370px) and (min-height:650px) {
   .title {
@@ -37,17 +55,29 @@
     font-size:2rem;
   }
   .rtc {
-    font-size:1.5rem;
+    font-size:1.25rem;
   }
 }
 @media only screen and (min-width:370px) and (min-height:800px) {
   .title {
     font-size:2.2rem;
+    margin-top: 20%;
+  }
+  .rtc {
+    font-size:1.35rem;
   }
 }
 @media only screen and (min-width:768px) {
   .logo {
     width:40%;
+  }
+  .rtc {
+    width:100%;
+    margin:auto;
+    margin-top: -4%;
+  }
+  .title{
+    margin-top:10%;
   }
 }
 @media only screen and (min-width:760px) and (min-height:1020px) {
@@ -56,13 +86,16 @@
     margin-top: 10%;
   }
   .rtc {
-    font-size:2rem;
+    font-size:1.85rem;
   }
 }
-@media only screen and (min-width:908px) {
+@media only screen and (min-width:938px) {
   .title {
     margin-top:6%;
     font-size:2.4rem;
+  }
+  .rtc {
+    margin-top: -6%;
   }
 }
 @media only screen and (min-width:1068px) {
@@ -72,16 +105,27 @@
   .logo {
     width:35%;
   }
+  .rtc {
+    padding:3%;
+    font-size:1.5rem;
+    width:80%;
+    margin-top: -8%;
+  }
 }
   @media only screen and (min-width:1000px) and (min-height:1320px) {
+  .rtc {
+    font-size:2.1rem;
+  }
   .title {
     margin-top: 20%;
     font-size: 3.5rem;
   }
-  .rtc {
-    font-size:2.25rem;
-  }
   .headDiv {
     margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width:1300px) {
+  .rtc {
+    margin-top: -10%;
   }
 }

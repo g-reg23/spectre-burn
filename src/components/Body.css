@@ -123,6 +123,12 @@
   }
 }
 @media only screen and (min-width:768px) {
+  .rtc {
+    margin-top: -4%;
+  }
+  .title{
+    margin-top:10%;
+  }
   .innerBurnDiv2 {
     margin-top: 1%;
     width: 60%;
@@ -186,13 +192,16 @@
 }
 
 @media only screen and (min-width:968px) {
+  .rtc {
+    margin-top: -6%;
+  }
   .innerSubDiv {
     padding:.5%;
   }
   .innerBurnDiv {
     padding:.2%;
     width:50%;
-    margin-top:0;
+    margin-top:1%;
   }
   .innerAddDiv {
     width:60%;
@@ -272,7 +281,21 @@
   .innerBurnDiv {
     padding:.05%;
   }
+  .rtc {
+    margin-top: -8%;
+  }
 }
-@media only screen and (min-width:1375px) {
-
+@media only screen and (min-width:1300px) {
+  .burnNumber {
+    font-size:2.05rem;
+  }
+  .supply {
+    font-size:2.45rem;
+  }
+  .burnTitle {
+    font-size:1.75rem;
+  }
+  .rtc {
+    margin-top: -10%;
+  }
 }
