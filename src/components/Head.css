@@ -22,18 +22,24 @@
   .title {
     font-size:2.25rem;
   }
+  .headDiv {
+    padding:1%
+  }
 }
 @media only screen and (min-width:768px) {
-  .headDiv {
-    padding:3%;
-  }
   .logo {
     width:40%;
   }
 }
+@media only screen and (min-width:908px) {
+  .title {
+    margin-top:6%;
+    font-size:2.4rem;
+  }
+}
 @media only screen and (min-width:1068px) {
   .headDiv {
-    padding:2%;
+    padding:2% 2% 0 1%;
   }
   .logo {
     width:35%;

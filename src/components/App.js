@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <Head />
-      <a className='rtc' href='https://etherscan.io/address/0x441d91f7aaee51c7ae8cab84333d6383a8a8c175#code' rel='noopener noreferrer' target='_blank'>Read This Contract!</a>
       <Body />
       <Foot />
     </div>

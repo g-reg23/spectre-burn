@@ -9,6 +9,15 @@
   border: 3px solid #21355f;
   background:#181a34;
 }
+.innerAddDiv {
+  width:90%;
+  padding:1%;
+  border: 3px solid #21355f;
+  background:#181a34;
+  margin:auto;
+  margin-top:3%;
+  border-radius:.5em;
+}
 .innerBurnDiv2 {
   margin-top: 2%
 }
@@ -33,11 +42,14 @@
   font-weight: 500;
 }
 .burnNumber {
-  font-size:2.1rem;
+  font-size:1.7rem;
   color: #efdc91;
   text-shadow: 0 0 0.7rem #e8820e;
   color:lightgoldenrodyellow;
   text-shadow: 0px 0px 3px;
+}
+.supply {
+  font-size:2.2rem
 }
 .addBurn {
   font-size:1.7rem;
@@ -47,6 +59,10 @@
 .addressP {
   word-wrap: break-word;
   color:#6b738a;
+}
+.addressDiv {
+  width:90%;
+  margin: auto;
 }
 @media only screen and (min-width:450px) {
   .burnTitle {
@@ -71,8 +87,8 @@
   }
   .addressP {
     font-size:1.3rem;
-    /* width:75%;
-    margin: auto; */
+    width:80%;
+    margin: auto;
     margin-bottom: 2%;
   }
   .addBurn {
@@ -93,16 +109,26 @@
 }
 
 @media only screen and (min-width:968px) {
+  .innerSubDiv {
+    padding:.5%;
+  }
+  .innerBurnDiv {
+    padding:.2%;
+    width:50%;
+    margin-top:0;
+  }
   .addressDiv {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    margin-top:1%;
+  }
+
+  .subBurnDiv {
+    margin-top:.5%;
   }
   .innerBurnDiv2 {
     margin-top: 1%;
     width: 90%;
-  }
-  .innerSubDiv {
-    padding:5%;
   }
   .subBurnDiv {
     column-gap:20px;
@@ -111,15 +137,17 @@
     font-size:1.75rem;
   }
   .burnNumber {
-    font-size:2.5rem;
-  }
-  .title {
-    font-size: 3rem;
+    font-size:2.35rem;
   }
 }
 
 @media only screen and (min-width:1160px) {
-
+  .innerSubDiv {
+    padding:.2%;
+  }
+  .innerBurnDiv {
+    padding:.05%;
+  }
 }
 @media only screen and (min-width:1375px) {
 
