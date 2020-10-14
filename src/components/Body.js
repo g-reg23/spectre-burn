@@ -10,8 +10,8 @@ import {useSpring, animated as a} from 'react-spring';
 function Body() {
   const fade = useSpring({
     transform:'scale(1)',
-    from:{transform:'scale(0.5)'},
-    config:{duration:1500},
+    from:{transform:'scale(0.05)'},
+    config:{duration:2500},
   })
   const left1 = useSpring({
     transform:'translateX(0%)',

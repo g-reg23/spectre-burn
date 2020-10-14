@@ -12,22 +12,22 @@ const Price = (props) => {
   const left2 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(-450%)'},
-    config:{duration:4000},
+    config:{duration:3500},
   })
   const right2 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(450%)'},
-    config:{duration:4000},
+    config:{duration:3500},
   })
   const left3 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(-650%)'},
-    config:{duration:5000},
+    config:{duration:4000},
   })
   const right3 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(650%)'},
-    config:{duration:5000},
+    config:{duration:4000},
   })
   const [fetch, setFetch] = useState(false);
   const [data, setData] = useState({
