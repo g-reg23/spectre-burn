@@ -4,6 +4,8 @@ import './Foot.css'
 function Foot() {
   // <div><a className='cp' href='https://gstauf.tech' target='_blank' rel='noopener noreferrer'>&copy; Copyright 2020, gstauf</a></div>
   // <div className='innerFootDiv'><a className='attLink' href='https://coingecko.com' target='_blank' rel='noopener noreferrer'>Price Data powered by CoinGecko API</a></div>
+  // <p className='donP'>Donations Accepted At:</p>
+  // <div><a className='attLink' href='https://etherscan.io/address/0x9FA0f414357EC08fcC6c4DD9BaEa74eca32c842b' target='_blank' rel='noopener noreferrer'>0x9FA0f414357EC08fcC6c4DD9BaEa74eca32c842b</a></div>
     return(
       <div className='footOuterDiv'>
         <div className='footStyle'>
@@ -17,8 +19,6 @@ function Foot() {
         <div className='footDiv'>
           <div className='innerFootDiv'><a className='attLink' href='https://github.com/ethereum/web3.js/' target='_blank' rel='noopener noreferrer'>Ethereum data and SPECTRE price powered by Web3.js</a></div>
           <div><a className='attLink' href='https://coingecko.com' target='_blank' rel='noopener noreferrer'>Ether Price Feed powered by CoinGecko API</a></div>
-          <p className='donP'>Donations Accepted At:</p>
-          <div><a className='attLink' href='https://etherscan.io/address/0x9FA0f414357EC08fcC6c4DD9BaEa74eca32c842b' target='_blank' rel='noopener noreferrer'>0x9FA0f414357EC08fcC6c4DD9BaEa74eca32c842b</a></div>
           <div className='innerFootDiv'><p className='cp'>&copy; Copyright 2020, gstauf</p></div>
         </div>
       </div>
