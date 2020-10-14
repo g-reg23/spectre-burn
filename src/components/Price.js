@@ -7,8 +7,33 @@ import commas from '../functions/commas';
 import './Price.css';
 import './Body.css';
 import fetchData from '../functions/fetchCoinGecko';
+import {useSpring, animated as a} from 'react-spring';
 
 const Price = (props) => {
+  const left2 = useSpring({
+    opacity:1,
+    from:{opacity:0},
+    config:{duration:3000},
+    delay:4000,
+  })
+  const right2 = useSpring({
+    opacity:1,
+    from:{opacity:0},
+    config:{duration:3000},
+    delay:4500,
+  })
+  const left3 = useSpring({
+    opacity:1,
+    from:{opacity:0},
+    config:{duration:3000},
+    delay:5000,
+  })
+  const right3 = useSpring({
+    opacity:1,
+    from:{opacity:0},
+    config:{duration:3000},
+    delay:5500,
+  })
   const [fetch, setFetch] = useState(false);
   const [data, setData] = useState({
     ethBalance:0,
@@ -52,24 +77,24 @@ const Price = (props) => {
       {!data.completed ? <Loader /> :
         <div className='priceDiv'>
           <div className='subBurnDiv'>
-            <div className='innerSubDiv'>
+            <a.div style={left2} className='innerSubDiv'>
               <p className='burnNumber'>${data.specPrice.toFixed(2)}</p>
               <p className='burnTitle'>SPECTRE Price</p>
-            </div>
-            <div className='innerSubDiv'>
+            </a.div>
+            <a.div style={right2} className='innerSubDiv'>
               <p className='burnNumber'>${commas((data.specPrice * props.circSupp).toFixed(0))}</p>
               <p className='burnTitle'>Market Cap</p>
-            </div>
+            </a.div>
           </div>
           <div className='subBurnDiv'>
-            <div className='innerSubDiv'>
+            <a.div style={left3} className='innerSubDiv'>
               <p className='burnNumber'>{(((56000-props.circSupp)/56000)*100).toFixed(2)}%</p>
               <p className='burnTitle'>Percent Burned</p>
-            </div>
-            <div className='innerSubDiv'>
+            </a.div>
+            <a.div style={right3} className='innerSubDiv'>
               <p className='burnNumber'>${commas(((56000-props.circSupp)*data.specPrice).toFixed(0))}</p>
               <p className='burnTitle'>Value Burned</p>
-            </div>
+            </a.div>
           </div>
         </div>
       }

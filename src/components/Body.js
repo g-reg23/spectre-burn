@@ -5,8 +5,27 @@ import Web3 from 'web3';
 import commas from '../functions/commas'
 import Flame from './Flame';
 import Price from './Price';
+import {useSpring, animated as a} from 'react-spring';
 
 function Body() {
+  const fade = useSpring({
+    opacity:1,
+    from:{opacity:0},
+    config:{duration:3000},
+    delay:2000,
+  })
+  const left1 = useSpring({
+    transform:'translateX(0%)',
+    from:{transform:'translateX(-150%)'},
+    config:{duration:3000},
+    delay:2000,
+  })
+  const right1 = useSpring({
+    transform:'translateX(0%)',
+    from:{transform:'translateX(150%)'},
+    config:{duration:3000},
+    delay:2000,
+  })
   const [fetch, setFetch] = useState(false)
   const [data, setData] = useState({
     supply:0,
@@ -41,20 +60,20 @@ function Body() {
   return(
     <div className='outerBodyDiv'>
       <div className='burnDiv'>
-        <div className='innerBurnDiv'>
+        <a.div style={fade} className='innerBurnDiv'>
           <p className='burnNumber supply'>{commas((data.supply - data.burn).toFixed(0))}<span className='decimals'>.{dec[1]}</span></p>
           <Flame />
           <p className='burnTitle'>SPECTRE Total Supply</p>
-        </div>
+        </a.div>
         <div className='subBurnDiv'>
-          <div className='innerSubDiv'>
+          <a.div style={left1} className='innerSubDiv'>
             <p className='burnNumber'>56,000</p>
             <p className='burnTitle'>Initial Supply</p>
-          </div>
-          <div className='innerSubDiv'>
+          </a.div>
+          <a.div style={right1} className='innerSubDiv'>
             <p className='burnNumber'>{commas((data.burn+(56000-data.supply)).toFixed(0))}</p>
             <p className='burnTitle'>SPECTRE Burnt</p>
-          </div>
+          </a.div>
         </div>
       </div>
       <Price contract={data.contract} web3={data.web3} fetched={fetch} circSupp={data.supply - data.burn}/>
