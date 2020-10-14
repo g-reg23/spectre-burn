@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './Body.css';
 import {ETH_LP_ADDRESS, WETH_ABI, WETH_ADDRESS, NETWORK, ADDRESS, ABI} from './appValues';
 import Web3 from 'web3';
-import Loader from './Loader';
 import commas from '../functions/commas';
 import './Price.css';
 import './Body.css';
@@ -11,28 +10,24 @@ import {useSpring, animated as a} from 'react-spring';
 
 const Price = (props) => {
   const left2 = useSpring({
-    opacity:1,
-    from:{opacity:0},
-    config:{duration:3000},
-    delay:4000,
+    transform:'translateX(0%)',
+    from:{transform:'translateX(-450%)'},
+    config:{duration:4000},
   })
   const right2 = useSpring({
-    opacity:1,
-    from:{opacity:0},
-    config:{duration:3000},
-    delay:4500,
+    transform:'translateX(0%)',
+    from:{transform:'translateX(450%)'},
+    config:{duration:4000},
   })
   const left3 = useSpring({
-    opacity:1,
-    from:{opacity:0},
-    config:{duration:3000},
-    delay:5000,
+    transform:'translateX(0%)',
+    from:{transform:'translateX(-650%)'},
+    config:{duration:5000},
   })
   const right3 = useSpring({
-    opacity:1,
-    from:{opacity:0},
-    config:{duration:3000},
-    delay:5500,
+    transform:'translateX(0%)',
+    from:{transform:'translateX(650%)'},
+    config:{duration:5000},
   })
   const [fetch, setFetch] = useState(false);
   const [data, setData] = useState({
@@ -74,7 +69,7 @@ const Price = (props) => {
   }, [props.fetched, fetch])
   return(
     <div>
-      {!data.completed ? <Loader /> :
+      {!data.completed ? <div className='empty'></div> :
         <div className='priceDiv'>
           <div className='subBurnDiv'>
             <a.div style={left2} className='innerSubDiv'>

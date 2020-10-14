@@ -9,22 +9,19 @@ import {useSpring, animated as a} from 'react-spring';
 
 function Body() {
   const fade = useSpring({
-    opacity:1,
-    from:{opacity:0},
-    config:{duration:3000},
-    delay:2000,
+    transform:'scale(1)',
+    from:{transform:'scale(0.5)'},
+    config:{duration:1500},
   })
   const left1 = useSpring({
     transform:'translateX(0%)',
-    from:{transform:'translateX(-150%)'},
+    from:{transform:'translateX(-250%)'},
     config:{duration:3000},
-    delay:2000,
   })
   const right1 = useSpring({
     transform:'translateX(0%)',
-    from:{transform:'translateX(150%)'},
+    from:{transform:'translateX(250%)'},
     config:{duration:3000},
-    delay:2000,
   })
   const [fetch, setFetch] = useState(false)
   const [data, setData] = useState({
