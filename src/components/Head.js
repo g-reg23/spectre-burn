@@ -7,7 +7,7 @@ function Head() {
   const fade = useSpring({
     transform:'translateY(0%)',
     from:{transform:'translateY(-200%)'},
-    config:{duration:2000}
+    config:{duration:1500}
   })
     return(
       <div>

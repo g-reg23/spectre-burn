@@ -5,23 +5,24 @@ import Web3 from 'web3';
 import commas from '../functions/commas'
 import Flame from './Flame';
 import Price from './Price';
+// import DeepBurn from './DeepBurn';
 import {useSpring, animated as a} from 'react-spring';
 
 function Body() {
   const fade = useSpring({
     transform:'scale(1)',
     from:{transform:'scale(0.05)'},
-    config:{duration:2500},
+    config:{duration:2000},
   })
   const left1 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(-250%)'},
-    config:{duration:3000},
+    config:{duration:2500},
   })
   const right1 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(250%)'},
-    config:{duration:3000},
+    config:{duration:2500},
   })
   const [fetch, setFetch] = useState(false)
   const [data, setData] = useState({
@@ -47,10 +48,10 @@ function Body() {
                 contract:contract,
                 web3:web3,
               })
+              setFetch(true);
             })
         })
 
-      setFetch(true);
     }
   }, [fetch,data])
   const dec = ((data.supply - data.burn)%1).toFixed(3).toString().split('.');
