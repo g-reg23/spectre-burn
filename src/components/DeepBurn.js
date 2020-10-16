@@ -5,7 +5,6 @@ import './DeepBurn.css';
 import getDate from '../functions/getDate';
 
 const DeepBurn = (props) => {
-  console.log(process.env.REACT_APP_ETHERSCAN_API);
   const [toggle, setTog] = useState(false);
   const [state, setState] = useState({
     burns:[],
