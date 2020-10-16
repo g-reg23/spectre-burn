@@ -13,7 +13,6 @@ const DeepBurn = (props) => {
     fetched:false
   })
   const getBurns = () => {
-    console.log('in');
     setTimeout(() => {
       fetch('https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' + ADDRESS + '&address=' + BURN_ADDRESS +'&page=1&offset=100&sort=asc&apikey=' + process.env.REACT_APP_ETHERSCAN_API)
         .then(res => res.json())
@@ -31,7 +30,6 @@ const DeepBurn = (props) => {
           fetch('https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' + ADDRESS + '&address=0x0000000000000000000000000000000000000000&page=1&offset=100&sort=asc&apikey=' + process.env.REACT_APP_ETHERSCAN_API)
             .then(res => res.json())
             .then(datas => {
-              console.log(datas);
               datas.result.forEach((d, index) => {
                 if (d.from === '0x0000000000000000000000000000000000000000'){
                   return;
@@ -52,7 +50,6 @@ const DeepBurn = (props) => {
               arr.forEach((a, i) => {
                 count += a.value;
                 count2 -= a.value
-                console.log(count + ': ' + count2);
                 arr2.push({
                   x:i,
                   y:count,
