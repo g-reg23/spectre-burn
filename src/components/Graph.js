@@ -39,12 +39,12 @@ const Graph = (props) => {
                 <VictoryBar
                   data={props.burnGraph}
                   labelComponent={<VictoryTooltip />}
-                  labels={'Supply'}
+                  labels={'Burnt'}
                 />
                 <VictoryBar
                   data={props.supplyGraph}
                   labelComponent={<VictoryTooltip />}
-                  labels={'Burnt'}
+                  labels={'Supply'}
                 />
             </VictoryGroup>
           </VictoryChart>
