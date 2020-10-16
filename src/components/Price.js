@@ -72,7 +72,7 @@ const Price = (props) => {
       {!data.completed ? <div className='empty'></div> :
         <div className='priceDiv'>
           <div className='subBurnDiv'>
-            <a.div style={left2} className='innerSubDiv'>
+            <a.div id='toggleB' style={left2} className='innerSubDiv'>
               <p className='burnNumber'>${data.specPrice.toFixed(2)}</p>
               <p className='burnTitle'>SPECTRE Price</p>
             </a.div>

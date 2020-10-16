@@ -5,7 +5,7 @@ import Web3 from 'web3';
 import commas from '../functions/commas'
 import Flame from './Flame';
 import Price from './Price';
-// import DeepBurn from './DeepBurn';
+import DeepBurn from './DeepBurn';
 import {useSpring, animated as a} from 'react-spring';
 
 function Body() {
@@ -75,6 +75,7 @@ function Body() {
         </div>
       </div>
       <Price contract={data.contract} web3={data.web3} fetched={fetch} circSupp={data.supply - data.burn}/>
+      {fetch ? <DeepBurn /> : null}
       <div className='addressDiv'>
         <div className='innerAddDiv'>
           <p className='addBurn'>{commas((56000-data.supply).toFixed(0))} SPECTRE</p><p className='addressP'>Burned at address 0x0000000000000000000000000000000000000000</p>

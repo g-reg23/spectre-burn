@@ -35,7 +35,12 @@
 }
 
 .innerFootDiv{
-  margin-bottom: 2%;
+  margin-bottom: 5%;
+}
+@media only screen and (min-width:760px) {
+  .innerFootDiv{
+    margin-bottom: 2.5%;
+  }
 }
 @media only screen and (min-width:760px) and (min-height:1020px) {
   .attLink {
@@ -59,6 +64,9 @@
 }
 
 @media only screen and (min-width:968px) {
+  .innerFootDiv{
+    margin-bottom: 1%;
+  }
   .footStyle {
     width:70%;
   }

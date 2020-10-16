@@ -1,0 +1,10 @@
+.cpButton {
+  background: #dcddef;
+  background: rgb(199,202,231);
+  background: linear-gradient(90deg, rgba(199,202,231,1) 0%, rgba(183,186,212,1) 47%, rgba(198,202,249,1) 100%);
+  padding: 1% 2%;
+  border-radius: .5rem;
+}
+.copied {
+  margin-left: 2%;
+}

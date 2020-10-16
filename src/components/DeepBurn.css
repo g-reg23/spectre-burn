@@ -1,16 +1,41 @@
 
+.outmostDiv {
+  margin-bottom:5%;
+}
+.outerDeep {
+  width:80%;
+  max-height:450px;
+  overflow: scroll;
+  margin:auto;
+  margin-top:8%;
+  background: #dcddef;
+  background: rgb(199,202,231);
+  background: linear-gradient(90deg, rgba(199,202,231,1) 0%, rgba(183,186,212,1) 47%, rgba(198,202,249,1) 100%);
+  color:rgba(199,202,231,1);
+  padding-bottom:3%;
+}
+.deepBurnDiv {
+  padding:1%;
+  background:#181a34;
+  background: rgb(24,26,52);
+  background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(70,77,154,1) 47%, rgba(8,13,71,1) 100%);
+  border-radius: .5rem;
+  margin:auto;
+  margin-top:5%;
+  width:90%;
+}
 .deepBurnP {
   cursor:pointer;
   text-decoration: underline;
 }
 .moreButton {
-  margin-top:5%;
-  font-size:1.1rem;
+  margin:5% 0%;
+  font-size:1.5rem;
   text-shadow: none;
   background: #dcddef;
   background: rgb(199,202,231);
   background: linear-gradient(90deg, rgba(199,202,231,1) 0%, rgba(183,186,212,1) 47%, rgba(198,202,249,1) 100%);
-  padding:2%;
+  padding:1% 2%;
   border-radius: .5rem;
   border: #6267b7 1px solid;
   color:#181a34;
@@ -18,6 +43,7 @@
   cursor: pointer;
   word-wrap: none;
   transition: .3s;
+  width:50%;
 }
 .moreButton:hover {
   border:#dcddef 1px solid;
@@ -25,4 +51,27 @@
   background: rgb(24,26,52);
   background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(23,28,91,1) 47%, rgba(8,13,71,1) 100%);
   color:#dcddef;
+}
+.burnHeader {
+  color:#282b57;
+}
+.burnSpan {
+  text-shadow: 0 0 0.7rem #e8820e;
+  color:aliceblue;
+}
+.dbt {
+  font-size:1.25rem;
+}
+.dbv {
+  font-size: 1.7rem;
+}
+
+.dbto, .dbh {
+  word-wrap: break-word;
+}
+
+@media only screen and (min-width:768px) {
+  .outerDeep {
+    width:65%;
+  }
 }
