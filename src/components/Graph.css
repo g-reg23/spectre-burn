@@ -1,0 +1,13 @@
+.graphTitle {
+  color:rgba(8,13,71,1);
+  margin-bottom:1%;
+}
+.areaTitle {
+  margin-bottom:-8%;
+}
+.toggleDiv {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

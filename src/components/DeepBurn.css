@@ -29,7 +29,7 @@
   text-decoration: underline;
 }
 .moreButton {
-  margin:5% 0%;
+  margin:7% 0%;
   font-size:1.5rem;
   text-shadow: none;
   background: #dcddef;
@@ -65,9 +65,31 @@
 .dbv {
   font-size: 1.7rem;
 }
+.buttonDiv {
+  margin-bottom:3%;
+}
 
 .dbto, .dbh {
   word-wrap: break-word;
+}
+.togButton {
+  padding:1% 2%;
+  width:25%;
+  border-radius:.5rem;
+  color:whitesmoke;
+  border:1px solid whitsmoke;
+  cursor:pointer;
+  font-size:.95rem;
+  background:rgba(70,77,154,1);
+  outline: none;
+}
+.toggleP {
+  color:#282b57;
+  text-decoration: underline;
+  cursor:pointer;
+  font-size: 1.4rem;
+  font-weight:550;
+  margin-bottom: 6%;
 }
 
 @media only screen and (min-width:768px) {

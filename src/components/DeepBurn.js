@@ -2,15 +2,23 @@ import React, {useState} from 'react';
 import {ADDRESS, BURN_ADDRESS} from './appValues';
 import Loader from './Loader';
 import './DeepBurn.css';
+import Graph from './Graph';
 import getDate from '../functions/getDate';
+import {useSpring, animated as a} from 'react-spring';
 
 const DeepBurn = (props) => {
+  const [graphT, setGraph] = useState(false);
   const [toggle, setTog] = useState(false);
   const [state, setState] = useState({
     burns:[],
     burnGraph:[],
     supplyGraph:[],
     fetched:false
+  })
+  const fade = useSpring({
+    opacity: 1,
+    from: {opacity:0},
+    config: {duration: 5000},
   })
   const getBurns = () => {
     setTimeout(() => {
@@ -45,6 +53,7 @@ const DeepBurn = (props) => {
               })
               let arr2 = [];
               let arr3 = [];
+              let arr4 = []
               let count = 0;
               let count2 = 56000;
               arr.forEach((a, i) => {
@@ -58,10 +67,15 @@ const DeepBurn = (props) => {
                   x:i,
                   y:count2,
                 })
+                arr4.push({
+                  x:i,
+                  y:a.value,
+                })
               })
               setState({
-                burnGraph:arr3,
-                supplyGraph:arr2,
+                burnGraph:arr2,
+                supplyGraph:arr3,
+                indiGraph:arr4,
                 burns:arr.reverse(),
                 fetched:true,
               })
@@ -81,20 +95,27 @@ const DeepBurn = (props) => {
   // const topFive = state.burns.slice(0,5)
   return(
     <div className='outmostDiv'>
-      {!toggle ? <button className='moreButton' onClick={setToggle}> Click For More Burn Info</button> :
+      {!toggle ? <a.button style={fade} className='moreButton' onClick={setToggle}> Click For More Burn Info</a.button> :
         <div>
           {state.fetched ?
             <div className='outerDeep'>
-              <div>
-                <h1 className='burnHeader'>List of All Burns</h1>
-                {state.burns.map((b, i) =>
-                  <div key={i} className='deepBurnDiv'>
-                    <p className='dbv'><span className='burnSpan'>{b.value.toFixed(2)} SPECTRE Burned</span></p>
-                    <p className='dbt'>{getDate(b.timeStamp)}</p>
-                    <a href={'https://etherscan.io/tx/' + b.hash} className='dbh' target='_blank' rel='noopener noreferrer'>View This Transaction</a>
-                  </div>
-                )}
-              </div>
+              {graphT ?
+                <div>
+                  <div className='buttonDiv'><p className='toggleP' onClick={() => setGraph(false)}>Back to Burns</p></div>
+                  <Graph supplyGraph={state.supplyGraph} burnGraph={state.burnGraph} supply={props.supply} indGraph={state.indiGraph}/>
+                </div> :
+                <div>
+                  <p className='toggleP' onClick={() => setGraph(true)}>Go To Graphs</p>
+                  <h1 className='burnHeader'>List of All Burns</h1>
+                  {state.burns.map((b, i) =>
+                    <div key={i} className='deepBurnDiv'>
+                      <p className='dbv'><span className='burnSpan'>{b.value.toFixed(2)} SPECTRE Burned</span></p>
+                      <p className='dbt'>{getDate(b.timeStamp)}</p>
+                      <a href={'https://etherscan.io/tx/' + b.hash} className='dbh' target='_blank' rel='noopener noreferrer'>View This Transaction</a>
+                    </div>
+                  )}
+                </div>
+              }
             </div> : <Loader />
           }
         </div>
