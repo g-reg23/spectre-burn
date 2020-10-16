@@ -85,6 +85,7 @@ const DeepBurn = (props) => {
   }
   const togOff = () => {
     setTog(false);
+    setGraph(false);
   }
   const setToggle = () => {
     setTog(true);
