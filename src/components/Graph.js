@@ -6,7 +6,7 @@ const Graph = (props) => {
   const [type, setType] = useState(1);
   const [area, setArea] = useState(0);
   const data = [
-    {type:'Supply',amt:(props.supply/56000)*360},
+    {type:'Circulating',amt:(props.supply/56000)*360},
     {type:'Burnt',amt:((56000-props.supply)/56000)*360}
   ]
   console.log(props.burns)
@@ -20,7 +20,7 @@ const Graph = (props) => {
       </div>
       {type === 0 ?
         <div>
-          <h1 className='graphTitle'>Pie Chart of Circulating vs Burnt SPECTRE</h1>
+          <h1 className='graphTitle'>Circulating vs Burnt SPECTRE</h1>
             <VictoryPie
               data={data}
               x="type"
@@ -31,8 +31,8 @@ const Graph = (props) => {
             />
         </div> : type === 1 ?
         <div>
-          <h1 className='graphTitle'>Grouped Bar Chart of Circulating vs Burnt SPECTRE Over Time</h1>
-          <VictoryChart domainPadding={10} height={215}>
+          <h1 className='graphTitle'>Circulating vs Burnt SPECTRE Over Time</h1>
+          <VictoryChart domainPadding={10} height={250}>
             <VictoryGroup offset={7}
               colorScale={"qualitative"}
             >
