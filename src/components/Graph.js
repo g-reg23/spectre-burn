@@ -78,6 +78,7 @@ const Graph = (props) => {
               >
                 <VictoryArea
                   data={props.indGraph}
+
                 />
               </VictoryChart>
           </div> :

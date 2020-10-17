@@ -100,5 +100,16 @@
 @media only screen and (min-width:768px) {
   .outerDeep {
     width:65%;
+    max-height:480px;
   }
 }
+@media only screen and (min-width:928px) {
+  .outerDeep {
+    max-height:520px;
+  }
+}
+/* @media only screen and (min-width:1128px) {
+  .outerDeep {
+    max-height:650px;
+  }
+} */
