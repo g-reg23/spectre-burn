@@ -60,15 +60,15 @@ const DeepBurn = (props) => {
                 count += a.value;
                 count2 -= a.value
                 arr2.push({
-                  x:i,
+                  x:i+1,
                   y:count,
                 })
                 arr3.push({
-                  x:i,
+                  x:i+1,
                   y:count2,
                 })
                 arr4.push({
-                  x:i,
+                  x:i+1,
                   y:a.value,
                 })
               })
