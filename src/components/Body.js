@@ -5,7 +5,6 @@ import Web3 from 'web3';
 import commas from '../functions/commas'
 import Flame from './Flame';
 import Price from './Price';
-import DeepBurn from './DeepBurn';
 import {useSpring, animated as a} from 'react-spring';
 
 function Body() {
@@ -24,16 +23,16 @@ function Body() {
     from:{transform:'translateX(250%)'},
     config:{duration:2500},
   })
-  const [fetch, setFetch] = useState(false)
   const [data, setData] = useState({
     supply:0,
     burn:0,
     initial:56000,
     contract:{},
-    web3:{}
+    web3:{},
+    fetch:false
   });
   useEffect(() => {
-    if (!fetch) {
+    if (!data.fetch) {
       const web3 = new Web3(new Web3.providers.HttpProvider(NETWORK));
       const contract = new web3.eth.Contract(ABI, ADDRESS);
       contract.methods.totalSupply().call()
@@ -47,13 +46,13 @@ function Body() {
                 initial:data.initial - (supply / 1000000000000000000),
                 contract:contract,
                 web3:web3,
+                fetch:true,
               })
-              setFetch(true);
             })
         })
 
     }
-  }, [fetch,data])
+  }, [data])
   const dec = ((data.supply - data.burn)%1).toFixed(3).toString().split('.');
   return(
     <div className='outerBodyDiv'>
@@ -74,8 +73,7 @@ function Body() {
           </a.div>
         </div>
       </div>
-      <Price contract={data.contract} web3={data.web3} fetched={fetch} circSupp={data.supply - data.burn}/>
-      {fetch ? <DeepBurn supply={data.supply-data.burn}/> : null}
+      <Price contract={data.contract} web3={data.web3} fetched={data.fetch} circSupp={data.supply - data.burn}/>
       <div className='addressDiv'>
         <div className='innerAddDiv'>
           <p className='addBurn'>{commas((56000-data.supply).toFixed(0))} SPECTRE</p><p className='addressP'>Burned at address 0x0000000000000000000000000000000000000000</p>

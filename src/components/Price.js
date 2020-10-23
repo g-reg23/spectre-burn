@@ -2,11 +2,17 @@ import React, {useState, useEffect} from 'react';
 import {ETH_LP_ADDRESS, WETH_ABI, WETH_ADDRESS, NETWORK, ADDRESS, ABI} from './appValues';
 import Web3 from 'web3';
 import commas from '../functions/commas';
-import './Price.css';
 import fetchData from '../functions/fetchCoinGecko';
 import {useSpring, animated as a} from 'react-spring';
+import DeepBurn from './DeepBurn';
+import './Price.css'
 
 const Price = (props) => {
+  const fade = useSpring({
+    opacity: 1,
+    from: {opacity:0},
+    config: {duration: 5000},
+  })
   const left2 = useSpring({
     transform:'translateX(0%)',
     from:{transform:'translateX(-450%)'},
@@ -27,17 +33,16 @@ const Price = (props) => {
     from:{transform:'translateX(650%)'},
     config:{duration:3500},
   })
-  const [fetch, setFetch] = useState(false);
   const [data, setData] = useState({
     ethBalance:0,
     specBalance:0,
     ethPrice:0,
     specPrice:0,
-    completed:false
+    completed:false,
   })
   useEffect(() => {
     if(props.fetched) {
-      if (!fetch) {
+      if (!data.completed) {
         const web3 = new Web3(new Web3.providers.HttpProvider(NETWORK));
         const wethContract = new web3.eth.Contract(WETH_ABI, WETH_ADDRESS);
         const contract = new web3.eth.Contract(ABI, ADDRESS);
@@ -57,14 +62,13 @@ const Price = (props) => {
                       specPrice: ethPrice / (specBalance/ethBalance),
                       completed:true,
                     })
-                    setFetch(true)
                   })
               })
 
           })
       }
     }
-  }, [props.fetched, fetch])
+  }, [props.fetched, data.completed])
   return(
     <div>
       {!data.completed ? <div className='empty'></div> :
@@ -87,6 +91,18 @@ const Price = (props) => {
             <a.div style={right3} className='innerSubDiv'>
               <p className='burnNumber'>${commas(((56000-props.circSupp)*data.specPrice).toFixed(0))}</p>
               <p className='burnTitle'>Value Burned</p>
+            </a.div>
+          </div>
+          <DeepBurn supply={props.circSupp}/>
+          <a.h1 className='lpTitle' style={fade}>SPECTRE/ETH Uniswap LP</a.h1>
+          <div className='subBurnDiv'>
+            <a.div style={left3} className='innerSubDiv'>
+              <p className='burnNumber'>{commas(data.specBalance.toFixed(0))} SPECTRE</p>
+              <p className='burnTitle'>Uniswap Liquidity</p>
+            </a.div>
+            <a.div style={right3} className='innerSubDiv'>
+              <p className='burnNumber'>{commas(data.ethBalance.toFixed(2))} ETH</p>
+              <p className='burnTitle'>Uniswap Liquidity</p>
             </a.div>
           </div>
         </div>
