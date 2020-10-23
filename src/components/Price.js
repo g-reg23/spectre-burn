@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import './Body.css';
 import {ETH_LP_ADDRESS, WETH_ABI, WETH_ADDRESS, NETWORK, ADDRESS, ABI} from './appValues';
 import Web3 from 'web3';
 import commas from '../functions/commas';
 import './Price.css';
-import './Body.css';
 import fetchData from '../functions/fetchCoinGecko';
 import {useSpring, animated as a} from 'react-spring';
 
