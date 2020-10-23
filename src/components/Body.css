@@ -102,9 +102,6 @@
   .innerSubDiv {
     padding:3%;
   }
-  .addressDiv {
-    margin-top: 10%;
-  }
 }
 @media only screen and (min-width:575px) {
   .innerBurnDiv2 {
@@ -177,9 +174,6 @@
   .innerBurnDiv {
     padding:3%;
   }
-  .addressDiv {
-    margin-top:5%;
-  }
   .addressP {
     font-size:1.7rem;
   }
@@ -250,7 +244,6 @@
     padding:3%;
   }
   .addressDiv {
-    margin-top:10%;
     width:100%;
   }
   .addressP {
@@ -270,7 +263,6 @@
   .addressDiv {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    margin-top:1%;
    }
   .innerSubDiv {
     padding:.2%;

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Body.css';
+import './Price.css';
 import {BURN_ADDRESS, ADDRESS, NETWORK, ABI} from './appValues';
 import Web3 from 'web3';
 import commas from '../functions/commas'
@@ -74,6 +75,7 @@ function Body() {
         </div>
       </div>
       <Price contract={data.contract} web3={data.web3} fetched={data.fetch} circSupp={data.supply - data.burn}/>
+      <a.h1 className='lpTitle' style={fade}>Burn Addresses</a.h1>
       <div className='addressDiv'>
         <div className='innerAddDiv'>
           <p className='addBurn'>{commas((56000-data.supply).toFixed(0))} SPECTRE</p><p className='addressP'>Burned at address 0x0000000000000000000000000000000000000000</p>
