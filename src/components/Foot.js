@@ -8,7 +8,7 @@ function Foot() {
     return(
       <div className='footOuterDiv'>
         <div className='footStyle'>
-          <p className='info'>Speculative Resistance (SPECTRE) is a highly deflational erc20 token within the <a href='https://etherscan.io/address/0x7f9a00e03c2e53a3af6031c17a150dbedaaab3dc#code' rel='noopener noreferrer' target='_blank'>RTC</a> ecosystem. For more info on SPECTRE:</p>
+          <p className='info'>Speculative Resistance (SPECTRE) is a highly deflationary erc20 token within the <a href='https://etherscan.io/address/0x7f9a00e03c2e53a3af6031c17a150dbedaaab3dc#code' rel='noopener noreferrer' target='_blank'>RTC</a> ecosystem. For more info on SPECTRE:</p>
           <a className='addressLink' href='https://etherscan.io/address/0x441d91f7aaee51c7ae8cab84333d6383a8a8c175#code' target='_blank' rel='noopener noreferrer'>Read THIS Contract!!</a>
         </div>
         <div className=' footStyle swapshipDiv'>

@@ -54,7 +54,7 @@ const Graph = (props) => {
           <div className='toggleDiv'>
             <button className='togButton' onClick={() => setArea(0)}>Total Burn</button>
             <button onClick={() => setArea(2)} className='togButton'>Total Supply</button>
-            <button onClick={() => setArea(1)} className='togButton'>Individual</button>
+            <button onClick={() => setArea(1)} className='togButton'>Single Burn</button>
           </div>
           {area === 0 ?
             <div>

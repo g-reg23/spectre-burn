@@ -97,14 +97,19 @@ const Price = (props) => {
           <a.h1 className='lpTitle' style={fade}>SPECTRE/ETH Uniswap LP</a.h1>
           <div className='subBurnDiv'>
             <a.div style={left3} className='innerSubDiv'>
-              <p className='burnNumber'>{commas(data.specBalance.toFixed(0))} SPECTRE</p>
+              <p className='burnNumber lpInfo'>{commas(data.specBalance.toFixed(0))} SPECTRE</p>
               <p className='burnTitle'>Uniswap Liquidity</p>
             </a.div>
             <a.div style={right3} className='innerSubDiv'>
-              <p className='burnNumber'>{commas(data.ethBalance.toFixed(2))} ETH</p>
+              <p className='burnNumber lpInfo'>{commas(data.ethBalance.toFixed(2))} ETH</p>
               <p className='burnTitle'>Uniswap Liquidity</p>
             </a.div>
           </div>
+          <div className='innerSubDiv lpInfoDiv'>
+            <p className='burnNumber lpInfo'>${commas(((data.ethBalance*data.ethPrice)+(data.specBalance*data.specPrice)).toFixed(2))}</p>
+            <p className='burnTitle'>Total Liquidity</p>
+          </div>
+
         </div>
       }
     </div>
