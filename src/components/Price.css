@@ -22,8 +22,6 @@
   background: linear-gradient(90deg, rgba(24,26,52,1) 0%, rgba(23,28,91,1) 47%, rgba(8,13,71,1) 100%);
 }
 .lpInfo {
-  margin: auto;
-  width:60%;
 }
 .iFrameDiv {
   width:80%;
@@ -59,5 +57,10 @@
 @media only screen and (min-width:1200px) {
   .lpTitle {
     font-size: 2.45rem;
+  }
+}
+@media only screen and (min-width:1000px) and (min-height:1330px) {
+  .lpTitle {
+    font-size:3rem;
   }
 }

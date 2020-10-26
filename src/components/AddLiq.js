@@ -21,11 +21,9 @@ const AddLiq = () => {
             width={loading ? '0%' : '100%'}
             onLoad={() => setLoading(false)}
             style={{
-              visibility:loading ? 'hidden' : 'visible',
               border: '0',
               margin: '0 auto',
               display: 'block',
-              borderRadius: '.5rem',
             }}
             id="myId"
             />

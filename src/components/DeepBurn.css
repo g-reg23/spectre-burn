@@ -108,6 +108,11 @@
     max-height:520px;
   }
 }
+@media only screen and (min-width:1000px) and (min-height:1330px) {
+  .moreButton {
+    font-size:2.5rem;
+  }
+}
 /* @media only screen and (min-width:1128px) {
   .outerDeep {
     max-height:650px;

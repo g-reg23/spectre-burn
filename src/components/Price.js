@@ -105,7 +105,7 @@ const Price = (props) => {
               <p className='burnTitle'>Uniswap Liquidity</p>
             </a.div>
             <a.div style={right3} className='innerSubDiv'>
-              <p className='burnNumber lpInfo'>{commas(data.ethBalance.toFixed(2))} ETH</p>
+              <p className='burnNumber lpInfo'>{commas(data.ethBalance.toFixed(2))} ETHER</p>
               <p className='burnTitle'>Uniswap Liquidity</p>
             </a.div>
           </div>
