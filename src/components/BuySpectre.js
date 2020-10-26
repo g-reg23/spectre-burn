@@ -15,7 +15,7 @@ const BuySpectre = () => {
             <div className='iFrameDiv'>
               {loading ? <Loader name={'Fetching Interface'} /> : null}
               <Iframe
-                src="https://app.uniswap.org/#/swap?outputCurrency=0x441d91F7AAEe51C7AE8cAB84333D6383A8a8C175/theme=dark"
+                src="https://app.uniswap.org/#/swap?outputCurrency=0x441d91F7AAEe51C7AE8cAB84333D6383A8a8C175&theme=dark"
                 height={loading ? '0px' : '660px'}
                 width={loading ? '0%' : '100%'}
                 onLoad={() => setLoading(false)}

@@ -16,7 +16,7 @@ const AddLiq = () => {
         <div className='iFrameDiv'>
           {loading ? <Loader name={'Fetching Interface'} /> : null}
           <Iframe
-            src="https://app.uniswap.org/#/add/0x441d91f7aaee51c7ae8cab84333d6383a8a8c175/ETH"
+            src="https://app.uniswap.org/#/add/0x441d91f7aaee51c7ae8cab84333d6383a8a8c175/ETH?theme=dark"
             height={loading ? '0px' : '660px'}
             width={loading ? '0%' : '100%'}
             onLoad={() => setLoading(false)}
