@@ -6,6 +6,8 @@ import fetchData from '../functions/fetchCoinGecko';
 import {useSpring, animated as a} from 'react-spring';
 import DeepBurn from './DeepBurn';
 import './Price.css'
+import BuySpectre from './BuySpectre';
+import AddLiq from './AddLiq';
 
 const Price = (props) => {
   const fade = useSpring({
@@ -94,6 +96,8 @@ const Price = (props) => {
             </a.div>
           </div>
           <DeepBurn supply={props.circSupp}/>
+          <BuySpectre />
+          <AddLiq />
           <a.h1 className='lpTitle' style={fade}>SPECTRE/ETH Uniswap LP</a.h1>
           <div className='subBurnDiv'>
             <a.div style={left3} className='innerSubDiv'>

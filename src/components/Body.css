@@ -265,7 +265,7 @@
     grid-template-columns: 1fr 1fr;
    }
   .innerSubDiv {
-    padding:.2%;
+    padding:1%;
   }
   .innerBurnDiv {
     padding:.05%;

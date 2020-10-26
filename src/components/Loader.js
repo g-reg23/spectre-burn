@@ -102,7 +102,7 @@ function Loader(props) {
           ></animate>
         </rect>
       </svg>
-      <p className='queryP'>Querying Blockchain</p>
+      <p className='queryP'>{props.name}</p>
     </div>
   );
 }

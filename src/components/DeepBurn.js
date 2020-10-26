@@ -117,7 +117,7 @@ const DeepBurn = (props) => {
                   )}
                 </div>
               }
-            </div> : <Loader />
+            </div> : <Loader name={'Querying Blockchain'}/>
           }
         </div>
       }

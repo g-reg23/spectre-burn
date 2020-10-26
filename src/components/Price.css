@@ -15,7 +15,7 @@
   margin-top:15px;
   border-radius:.5em;
   width:60%;
-  padding:1% 2% 0 2%;
+  padding:2%;
   border: 3px solid #21355f;
   background:#181a34;
   background: rgb(24,26,52);
@@ -24,6 +24,10 @@
 .lpInfo {
   margin: auto;
   width:60%;
+}
+.iFrameDiv {
+  width:80%;
+  margin:auto;
 }
 @media only screen and (min-width:410px){
   .lpInfo {
@@ -47,6 +51,9 @@
 @media only screen and (min-width:950px) {
   .lpTitle {
     font-size: 2.25rem;
+  }
+  .lpInfoDiv {
+    padding:.5%;
   }
 }
 @media only screen and (min-width:1200px) {
